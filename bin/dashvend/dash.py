@@ -60,6 +60,7 @@ bitcoin.net.CInv = CInv
 import bitcoin.messages
 
 
+#########################################################################
 class CTransactionLock(bitcoin.core.ImmutableSerializable):
     """Dash InstantX transaction lock:
         hash, masternode vin, masternode signatures, effective block """
@@ -104,6 +105,7 @@ class CTransactionLock(bitcoin.core.ImmutableSerializable):
             b2lx(self.hash), self.vin, b2lx(self.sig), self.height)
 
 
+
 class msg_ix(bitcoin.messages.MsgSerializable):
     command = b"ix"
 
@@ -142,6 +144,9 @@ class msg_txlvote(bitcoin.messages.MsgSerializable):
 
     def __repr__(self):
         return "msg_txlvote(tx=%s)" % (repr(self.txlvote))
+
+
+#########################################################################
 
 
 class msg_ignore():
