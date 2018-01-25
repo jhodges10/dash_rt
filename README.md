@@ -1,19 +1,10 @@
-# dashvend
+# dash_rt
 
-Example system for processing Dash InstantX payments
-
-This repo contains everything needed to recreate the Miami "dash'n'drink" soda
-machine InstantX tech demo.
+This program is designed to extract a real-time data stream of governance objects from the dashd process, through IPC/socket.
 
 # overview
 
-Dashvend is a network-driven python script which:
- - generates payment addresses
- - masquerades as a local dashd peer (port 9999 communication)
- - watches for transactions on the dash network to the next payment address
- - refunds non-InstantX transactions and over/underpaid InstantX transactions
- - counts masternode locks for passing transactions
- - triggers two relays (sign light, product release) when the lock count meets a configurable threshold
+dash_rt is 
 
 ## processing overview
 
